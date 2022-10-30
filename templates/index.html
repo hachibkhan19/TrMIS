@@ -7,24 +7,20 @@
     <title>Course</title>
 </head>
 <body>
-    <h1>Course</h1>
-    {% for course in courses %}
-        <p>course category: {{course.course_category.name}}</p>
-        <hr>
-        <p>course name: {{course.name}}</p>
-    {% endfor %}
-
-    <h1>Training course details</h1>
-    {% for training_course_detail in training_course_details %}
-        <p>Training course detail name:{{training_course_detail.name}}</p>
-        <b>Training course name:{{training_course_detail.course}}</b>
-        <br>
-        <strong>Training course detail organization name {{training_course_detail.organization}}</strong>
-    {% endfor %}
-
-    <h1>Batch</h1>
     {% for batch in batches %}
-       <p> {{batch.batch_name}}</p>
+       <h1> Batch Name : {{batch.batch_name}}</h1>
+       <h1>Course Name: {{batch.training_course_detail.course.name}}</h1>
+       <h1>Training course detail name: {{batch.training_course_detail.name}}</h1>
+
+       {% for trainee in batch.trainee.all %}
+        <h1>Trainee Name: {{trainee.name}}</h1>
+       {% endfor %}
+
+
+       {% for trainer in batch.trainer.all %}
+        <h1>Trainer Name: {{trainer.name}}</h1>
+       {% endfor %}
+
     {% endfor %}
 </body>
 </html>

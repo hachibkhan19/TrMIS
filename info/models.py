@@ -14,6 +14,9 @@ class Address(models.Model):
     district = models.CharField(max_length=200)
     thana = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.district
+
     class Meta:
         verbose_name = "Address"
         verbose_name_plural = "Adresses"
@@ -23,6 +26,9 @@ class Address(models.Model):
 class Contact(models.Model):
     email = models.EmailField(max_length=200)
     phone = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.email
 
     class Meta:
         verbose_name = 'Contact'

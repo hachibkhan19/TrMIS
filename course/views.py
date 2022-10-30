@@ -21,9 +21,9 @@ def course(request):
     # course_name = Course.objects.filter(name='CSE-132')
     # batch = TrainingCourseDetail.objects.filter(course__name='CSE-132')
 
-    batch = Batch.objects.filter(training_course_detail__course__name='Arts')
-    course = Course.objects.filter(course_rel__name='Lab')
-    print(course)
+    batch = Batch.objects.filter(training_course_detail__course__name='CSC123')
+    
+  
 
     context = {
         "batches": batch
