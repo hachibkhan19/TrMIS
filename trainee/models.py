@@ -11,7 +11,7 @@ class Trainee(models.Model):
     contact = models.OneToOneField(Contact, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.nid
+        return self.name
 
     class Meta:
         verbose_name = 'Trainee'
