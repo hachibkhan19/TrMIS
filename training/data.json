@@ -1,0 +1,131 @@
+{
+    "courseId": 1,
+    "batchesByYear": [
+      {
+        "year": "2011",
+        "batches": [
+          {
+            "id": 2,
+            "name": "Open-source modular superstructure",
+            "trainees": 13
+          },
+          {
+            "id": 60,
+            "name": "Quality-focused well-modulated methodology",
+            "trainees": 4
+          },
+          {
+            "id": 78,
+            "name": "Synergized non-volatile core",
+            "trainees": 1
+          }
+        ]
+      },
+      {
+        "year": "2012",
+        "batches": [
+          {
+            "id": 98,
+            "name": "Inverse explicit capacity",
+            "trainees": 6
+          }
+        ]
+      },
+      {
+        "year": "2014",
+        "batches": [
+          {
+            "id": 26,
+            "name": "Automated human-resource benchmark",
+            "trainees": 1
+          }
+        ]
+      },
+      {
+        "year": "2015",
+        "batches": [
+          {
+            "id": 47,
+            "name": "Sharable multimedia project",
+            "trainees": 14
+          }
+        ]
+      },
+      {
+        "year": "2016",
+        "batches": [
+          {
+            "id": 22,
+            "name": "Stand-alone grid-enabled archive",
+            "trainees": 9
+          },
+          {
+            "id": 74,
+            "name": "Horizontal asynchronous forecast",
+            "trainees": 13
+          },
+          {
+            "id": 37,
+            "name": "Re-contextualized discrete paradigm",
+            "trainees": 16
+          },
+          {
+            "id": 70,
+            "name": "Team-oriented needs-based definition",
+            "trainees": 17
+          }
+        ]
+      },
+      {
+        "year": "2017",
+        "batches": [
+          {
+            "id": 19,
+            "name": "Progressive asymmetric archive",
+            "trainees": 19
+          },
+          {
+            "id": 25,
+            "name": "Configurable web-enabled task-force",
+            "trainees": 14
+          }
+        ]
+      },
+      {
+        "year": "2018",
+        "batches": [
+          {
+            "id": 49,
+            "name": "Exclusive maximized alliance",
+            "trainees": 0
+          }
+        ]
+      },
+      {
+        "year": "2019",
+        "batches": [
+          {
+            "id": 63,
+            "name": "Centralized value-added emulation",
+            "trainees": 11
+          },
+          {
+            "id": 4,
+            "name": "User-centric uniform workforce",
+            "trainees": 11
+          }
+        ]
+      },
+      {
+        "year": "2020",
+        "batches": [
+          {
+            "id": 93,
+            "name": "Robust reciprocal matrix",
+            "trainees": 8
+          }
+        ]
+      }
+    ],
+    "id": 1
+  }

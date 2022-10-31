@@ -22,6 +22,7 @@ class TrainerSerializer(serializers.ModelSerializer):
 class BatchSerializer(serializers.ModelSerializer):
     trainee = TraineeSerializer(many=True, read_only=True)
     trainer = TrainerSerializer(many=True, read_only=True)
+    course_name = serializers.CharField(source="training_course_detail.course.name")
     coordinatior_name = serializers.CharField(source='coordinatior.name')
     training_course_detail_name = serializers.CharField(source='training_course_detail.name')
     training_center_address = serializers.CharField(source='training_center.address')
@@ -29,4 +30,4 @@ class BatchSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Batch
-        fields = ("id", "batch_name", "trainee", "trainer", "coordinatior_name", "training_course_detail_name", "training_center_address")
+        fields = ("id", "batch_name", "course_name", "trainee", "trainer", "coordinatior_name", "training_course_detail_name", "training_center_address")

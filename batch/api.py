@@ -7,7 +7,6 @@ from . models import Batch
 
 # Create your views here.
 class BatchApiView(APIView):
-
     def get(self, request):
         # obj = Batch.objects.select_related()
         batch = Batch.objects.prefetch_related('trainee','trainer').select_related()
