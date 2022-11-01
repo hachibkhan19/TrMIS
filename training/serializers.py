@@ -1,4 +1,5 @@
 from dataclasses import fields
+import imp
 from pyexpat import model
 from rest_framework import serializers
 from .models import TrainingCourseDetail
@@ -11,17 +12,16 @@ class BatchSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Batch
-        fields = ["id", "batch_name", "trainees"]
+        fields = ["id", "batch_name", "trainees", "year"]
 
 
 class CourseSerializer(serializers.ModelSerializer):
-    # id = serializers.IntegerField(read_only=True)
     batch = serializers.SerializerMethodField()
 
     class Meta:
         model = Course
-        fields = ("name", "batch")
+        fields = ("id", "name", "batch")
      
-    def get_batch(self, obj):
-        batch = Batch.objects.all()
+    def get_batch(self, name):
+        batch = Batch.objects.filter(training_course_detail__course__name=name)
         return BatchSerializer(batch, many=True).data

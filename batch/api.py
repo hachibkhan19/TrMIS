@@ -8,7 +8,6 @@ from . models import Batch
 # Create your views here.
 class BatchApiView(APIView):
     def get(self, request):
-        # obj = Batch.objects.select_related()
         batch = Batch.objects.prefetch_related('trainee','trainer').select_related()
         serializer = BatchSerializer(batch, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)

@@ -12,14 +12,24 @@ class Batch(models.Model):
     coordinatior = models.ForeignKey(Coordinatior, on_delete=models.CASCADE)
     training_course_detail = models.ForeignKey(TrainingCourseDetail, on_delete=models.CASCADE, related_name='training_course_detail_rel')
     training_center = models.ForeignKey(TrainingCenter, on_delete=models.CASCADE)
+    start_date = models.DateField()
+    end_date = models.DateField()
+    
     
     def __str__(self):
         return self.batch_name
+
+    @property
+    def year(self):
+        return self.start_date.year
+
+    @property
+    def course_name(self):
+        return self.training_course_detail.course.name
 
     class Meta:
         verbose_name = 'Batch'
         verbose_name_plural = 'Batches'
         db_table = 'batch'
-
 
 
