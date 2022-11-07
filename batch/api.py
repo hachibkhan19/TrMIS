@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -14,38 +14,14 @@ class BatchApiView(APIView):
    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# class BatchDetailsApiView(APIView):
+#     def get(self, request, id):
+#         try:
+#             batch = Batch.objects.get(id=id)
+#         except Batch.DoesNotExist:
+#             return Response(f'Course no {id} is not found'.format(id), status=status.HTTP_404_NOT_FOUND)        
+#         serializer = BatchDetailsSerializer(batch)
+#         return Response(serializer.data)
 
 
 

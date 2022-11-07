@@ -17,4 +17,3 @@ class Trainee(models.Model):
         verbose_name = 'Trainee'
         verbose_name_plural = 'Trainees'
         db_table = 'trainee'
-        

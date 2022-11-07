@@ -3,5 +3,11 @@ from .models import CourseCategory, Course, CourseMaterial
 
 # Register your models here.
 admin.site.register(CourseCategory)
-admin.site.register(Course)
+
+
+class CourseAdmin(admin.ModelAdmin):
+    list_display = ("id", "name")
+
+
+admin.site.register(Course, CourseAdmin)
 admin.site.register(CourseMaterial)

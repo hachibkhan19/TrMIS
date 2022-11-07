@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.db import models
 from coordinatiors.models import Coordinatior
 from training.models import TrainingCourseDetail, TrainingCenter
@@ -12,7 +13,7 @@ class Batch(models.Model):
     coordinatior = models.ForeignKey(Coordinatior, on_delete=models.CASCADE)
     training_course_detail = models.ForeignKey(TrainingCourseDetail, on_delete=models.CASCADE, related_name='training_course_detail_rel')
     training_center = models.ForeignKey(TrainingCenter, on_delete=models.CASCADE)
-    start_date = models.DateField()
+    start_date = models.DateField(verbose_name="course year")
     end_date = models.DateField()
     
     
